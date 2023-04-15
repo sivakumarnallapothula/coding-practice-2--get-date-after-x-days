@@ -1,8 +1,7 @@
 const sk = require("date-fns/addDays");
 const ok = (days) => {
   const l = sk(new Date(2020, 07, 22), days);
-  return l;
+  return `${l.getDate()}-${l.getMonth() + 1}-${l.getFullYear()}`;
 };
-let m = ok(3);
-console.log(m);
+ok(3);
 module.exports = ok;
